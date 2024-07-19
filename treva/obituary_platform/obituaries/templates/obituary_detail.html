@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ obituary.name }} - Obituary</title>
+    <meta name="description" content="{{ obituary.content|truncatewords:20 }}">
+    <meta name="keywords" content="obituary, {{ obituary.name }}, {{ obituary.author }}">
+    <meta property="og:title" content="{{ obituary.name }} - Obituary">
+    <meta property="og:description" content="{{ obituary.content|truncatewords:20 }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:image" content="{% static 'path/to/your/image.jpg' %}">
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>{{ obituary.name }}</h1>
+    <p>Date of Birth: {{ obituary.date_of_birth }}</p>
+    <p>Date of Death: {{ obituary.date_of_death }}</p>
+    <p>{{ obituary.content }}</p>
+    <p>Author: {{ obituary.author }}</p>
+    <p>Submission Date: {{ obituary.submission_date }}</p>
+    <div>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">Share on Facebook</a>
+        <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ obituary.name }} - Obituary">Share on Twitter</a>
+    </div>
+</body>
+</html>

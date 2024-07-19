@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/hp/Desktop/orbituary app/obituary_platform.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1526"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,10:mainobituaries"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE obituaries (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    date_of_birth DATE,
+    date_of_death DATE,
+    content TEXT,
+    author VARCHAR(100),
+    submission_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    slug VARCHAR(255) UNIQUE
+);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
